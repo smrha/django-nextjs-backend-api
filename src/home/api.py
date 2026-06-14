@@ -14,6 +14,6 @@ class UserSchema(Schema):
 def hello(request):
     return "Hello World!"
 
-@api.get("/me", response=UserSchema, auth=JWTAuth)
+@api.get("/me", response=UserSchema, auth=JWTAuth())
 def me(request):
     return request.user
