@@ -5,6 +5,7 @@ from ninja_jwt.authentication import JWTAuth
 
 api = NinjaExtraAPI()
 api.register_controllers(NinjaJWTDefaultController)
+api.add_router("/waitlists/", "waitlists.api.router")
 
 class UserSchema(Schema):
     username: str
